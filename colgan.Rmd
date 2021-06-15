@@ -1,0 +1,27 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+library(haven)
+theme_set(theme_light())
+
+colgan_raw <- read_dta("Measuring Revolution.COLGAN.2012Nov.dta")
+```
+
+
+
+```{r}
+colgan_raw %>% 
+  count(stabb, sort = T)
+```
+
+
+
+
